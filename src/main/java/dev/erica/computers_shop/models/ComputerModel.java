@@ -33,4 +33,14 @@ public class ComputerModel implements Computer {
 
     @Override
     public void setPrice(double price) { this.price = price; }
+
+    @Override
+    public String toString() {
+        return "Ordenador:" +
+                " marca: " + brand.getBrandName() +
+                ", memoria RAM: " + memory.getCapacity() + "GB" +
+                ", CPU: " + CPU.getCPUName() +
+                ", OS: " + OS.getOSName() +
+                ", precio: " + price + "€";
+    }
 }

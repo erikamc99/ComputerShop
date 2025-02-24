@@ -34,6 +34,6 @@ public class ComputerModelTest {
     @Test
     @DisplayName("Test del método toString")
     void testToString() {
-        assertEquals("Ordenador: marca=ASUS, memoria=RAM_16GB, CPU=INTEL_I7, OS=WINDOWS_10, precio=1500.0€", computer.toString());
+        assertEquals("Ordenador: marca: Asus, memoria RAM: 16GB, CPU: Intel Core i7, OS: Windows 10, precio: 1500.0€", computer.toString());
     }
 }
