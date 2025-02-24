@@ -14,4 +14,13 @@ public class ShopModelTest {
         assertEquals("Eri", shop.getOwner());
         assertEquals("123456789", shop.getId());
     }
+
+    @Test
+    @DisplayName("Test de addComputer and computers List")
+    public void testAddComputer() {
+        ShopModel shop = new ShopModel("Ordenadores SL", "Eri", "123456789");
+        ComputerModel computer = new ComputerModel(Brand.APPLE, Memory.RAM_256GB, CPU.APPLE_M1, OS.MACOS, 2000);
+        shop.addComputer(computer);
+        assertEquals(1, shop.computerList().size(), 1);
+        }
 }
