@@ -27,7 +27,7 @@ public class ShopModel implements Shop {
 
     @Override
     public List<ComputerModel> computerList() {
-        return new ArrayList<>(computers);
+        return computers;
     }
     
     @Override

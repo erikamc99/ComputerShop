@@ -29,8 +29,8 @@ public class ShopControllerTest {
     @Test
     @DisplayName("Test para eliminar un ordenador desde el controlador")
     public void testRemoveComputer() {
-        controller.removeComputer(Brand.APPLE, 1);
-        assertEquals(shop.computerList().size(), 0);
+        controller.removeComputer(Brand.APPLE, 2);
+        assertEquals(0, shop.computerList().size());
     }
 
     @Test

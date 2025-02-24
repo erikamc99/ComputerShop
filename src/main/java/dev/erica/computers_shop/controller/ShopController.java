@@ -21,4 +21,8 @@ public class ShopController {
     public void searchComputer(Brand brand) {
         shop.searchComputer(brand);
     }
+
+    public void showAllComputers() {
+        shop.computerList();
+    }
 }
