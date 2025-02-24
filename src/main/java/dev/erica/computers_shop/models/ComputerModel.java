@@ -2,6 +2,9 @@ package dev.erica.computers_shop.models;
 
 
 public class ComputerModel implements Computer {
+    
+    private static int idCounter = 1;
+    private final int id;
     private final Brand brand;
     private final Memory memory;
     private final CPU CPU;
@@ -9,12 +12,16 @@ public class ComputerModel implements Computer {
     private double price;
 
     public ComputerModel(Brand brand, Memory memory, CPU CPU, OS OS, double price) {
+        
+        this.id = idCounter++;
         this.brand = brand;
         this.memory = memory;
         this.CPU = CPU;
         this.OS = OS;
         this.price = price;
     }
+
+    public int getID() { return id; }
 
     @Override
     public Brand getBrand() { return brand; }
