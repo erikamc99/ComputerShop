@@ -26,7 +26,7 @@ public class ShopController {
         return shop.searchComputer(brand);
     }
 
-    public void showAllComputers() {
-        shop.computerList();
+    public List<ComputerModel> showAllComputers() {
+       return shop.computerList();
     }
 }
