@@ -1,6 +1,10 @@
 package dev.erica.computers_shop.controller;
 
-import dev.erica.computers_shop.models.*;
+import java.util.List;
+
+import dev.erica.computers_shop.models.Brand;
+import dev.erica.computers_shop.models.ComputerModel;
+import dev.erica.computers_shop.models.ShopModel;
 
 public class ShopController {
 
@@ -18,11 +22,11 @@ public class ShopController {
         shop.deleteComputer(brand, id);
     }
 
-    public void searchComputer(Brand brand) {
-        shop.searchComputer(brand);
+    public List<ComputerModel> searchComputer(Brand brand) {
+        return shop.searchComputer(brand);
     }
 
-    public void showAllComputers() {
-        shop.computerList();
+    public List<ComputerModel> showAllComputers() {
+       return shop.computerList();
     }
 }
