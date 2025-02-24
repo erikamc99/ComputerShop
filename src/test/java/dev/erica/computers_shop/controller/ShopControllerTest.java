@@ -12,7 +12,7 @@ public class ShopControllerTest {
     @DisplayName("Test para añadir un ordenador desde el controlador")
     public void testAddComputer() {
         ShopModel shop = new ShopModel("Computer Shop", "Pepito", "123456789");
-        ShopController controller = new ShopController();
+        ShopController controller = new ShopController(shop);
         controller.addComputer(new ComputerModel(Brand.ASUS, Memory.RAM_16GB, CPU.AMD_RYZEN5, OS.WINDOWS_10, 1500));
         assertEquals(shop.computerList().size(), 1);
     }
