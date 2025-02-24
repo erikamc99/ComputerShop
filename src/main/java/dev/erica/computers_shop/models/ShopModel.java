@@ -2,6 +2,7 @@ package dev.erica.computers_shop.models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ShopModel implements Shop {
     private final String shopName;
@@ -41,10 +42,9 @@ public class ShopModel implements Shop {
     }
 
     @Override
-    public ComputerModel searchComputer(Brand brand) {
+    public List<ComputerModel> searchComputer(Brand brand) {
         return computers.stream()
                 .filter(c -> c.getBrand() == brand)
-                .findFirst()
-                .orElse(null);
+                .collect(Collectors.toList());
     }
 }

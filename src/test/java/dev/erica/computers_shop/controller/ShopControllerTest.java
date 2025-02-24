@@ -1,12 +1,16 @@
 package dev.erica.computers_shop.controller;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import dev.erica.computers_shop.models.*;
+import dev.erica.computers_shop.models.Brand;
+import dev.erica.computers_shop.models.CPU;
+import dev.erica.computers_shop.models.ComputerModel;
+import dev.erica.computers_shop.models.Memory;
+import dev.erica.computers_shop.models.OS;
+import dev.erica.computers_shop.models.ShopModel;
 
 public class ShopControllerTest {
     private ShopController controller;
@@ -37,7 +41,7 @@ public class ShopControllerTest {
     @DisplayName("Test para buscar un ordenador por marca desde el controlador")
     public void testSearchComputer() {
         controller.searchComputer(Brand.APPLE);
-        assertEquals(shop.searchComputer(Brand.APPLE).getBrand(), Brand.APPLE);
+        assertEquals(shop.searchComputer(Brand.APPLE).get(0).getBrand(), Brand.APPLE);
     }
 
     @Test
