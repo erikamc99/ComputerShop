@@ -22,5 +22,6 @@ public class ShopModelTest {
         ComputerModel computer = new ComputerModel(Brand.APPLE, Memory.RAM_256GB, CPU.APPLE_M1, OS.MACOS, 2000);
         shop.addComputer(computer);
         assertEquals(1, shop.computerList().size(), 1);
-        }
+    }
+    
 }
