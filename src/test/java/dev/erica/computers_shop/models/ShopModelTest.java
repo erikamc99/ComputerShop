@@ -50,4 +50,10 @@ public class ShopModelTest {
     public void testSearchComputer() {
         assertEquals(computer, shop.searchComputer(Brand.APPLE));
     }
+
+    @Test
+    @DisplayName("Test para buscar un ordenador null")
+    public void testSearchComputerNull() {
+        assertEquals(null, shop.searchComputer(Brand.MICROSOFT));
+    }
 }
