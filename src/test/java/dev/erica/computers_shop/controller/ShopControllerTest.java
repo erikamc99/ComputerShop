@@ -32,4 +32,11 @@ public class ShopControllerTest {
         controller.removeComputer(Brand.APPLE, 1);
         assertEquals(shop.computerList().size(), 0);
     }
+
+    @Test
+    @DisplayName("Test para buscar un ordenador por marca desde el controlador")
+    public void testSearchComputer() {
+        controller.searchComputer(Brand.APPLE);
+        assertEquals(shop.searchComputer(Brand.APPLE).getBrand(), Brand.APPLE);
+    }
 }
