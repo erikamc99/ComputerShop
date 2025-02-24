@@ -39,4 +39,11 @@ public class ShopControllerTest {
         controller.searchComputer(Brand.APPLE);
         assertEquals(shop.searchComputer(Brand.APPLE).getBrand(), Brand.APPLE);
     }
+
+    @Test
+    @DisplayName("Test para mostrar todos los ordenadores desde el controlador")
+    public void testShowAllComputers() {
+        controller.showAllComputers();
+        assertEquals(shop.computerList().size(), 1);
+    }
 }
