@@ -39,4 +39,12 @@ public class ShopModel implements Shop {
     public boolean deleteComputer(Brand brand, int id) {
         return computers.removeIf(c -> c.getBrand() == brand && c.getID() == id);
     }
+
+    @Override
+    public ComputerModel searchComputer(Brand brand) {
+        return computers.stream()
+                .filter(c -> c.getBrand() == brand)
+                .findFirst()
+                .orElse(null);
+    }
 }
