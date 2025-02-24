@@ -37,4 +37,11 @@ public class ShopModelTest {
         shop.deleteComputer(Brand.APPLE, 1);
         assertEquals(0, shop.computerList().size(), 1);
     }
+
+    @Test
+    @DisplayName("Test para borrar un ordenador null")
+    public void testDeleteComputerNull() {
+        shop.deleteComputer(Brand.MICROSOFT, 2);
+        assertEquals(1, shop.computerList().size(), 1);
+    }
 }
