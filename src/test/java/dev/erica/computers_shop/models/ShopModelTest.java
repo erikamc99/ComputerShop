@@ -44,4 +44,10 @@ public class ShopModelTest {
         shop.deleteComputer(Brand.MICROSOFT, 2);
         assertEquals(1, shop.computerList().size(), 1);
     }
+
+    @Test
+    @DisplayName("Test para buscar un ordenador por marca")
+    public void testSearchComputer() {
+        assertEquals(computer, shop.searchComputer(Brand.APPLE));
+    }
 }
