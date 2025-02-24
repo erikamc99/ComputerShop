@@ -13,4 +13,8 @@ public class ShopController {
     public void addComputer(ComputerModel computer) {
         shop.addComputer(computer);
     }
+
+    public void removeComputer(Brand brand, int id) {
+        shop.deleteComputer(brand, id);
+    }
 }
