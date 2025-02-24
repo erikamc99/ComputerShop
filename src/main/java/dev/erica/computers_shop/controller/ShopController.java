@@ -17,4 +17,8 @@ public class ShopController {
     public void removeComputer(Brand brand, int id) {
         shop.deleteComputer(brand, id);
     }
+
+    public void searchComputer(Brand brand) {
+        shop.searchComputer(brand);
+    }
 }
