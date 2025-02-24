@@ -34,4 +34,9 @@ public class ShopModel implements Shop {
     public void addComputer(ComputerModel computer) {
         computers.add(computer);
     }
+
+    @Override
+    public boolean deleteComputer(Brand brand, int id) {
+        return computers.removeIf(c -> c.getBrand() == brand && c.getID() == id);
+    }
 }

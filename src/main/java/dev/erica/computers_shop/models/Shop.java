@@ -9,4 +9,5 @@ public interface Shop {
 
     List<ComputerModel> computerList();
     void addComputer(ComputerModel computer);
+    boolean deleteComputer(Brand brand, int id);
 }
